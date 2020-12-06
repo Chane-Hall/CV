@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8"/>
+		<meta name="author" content="Chane Hall"/>
+		<link href="style.css" type="text/css" rel="stylesheet" />
+		<script src="script.js" type="text/javascript" >
+		</script>	
+	</head>
+	<body style="background-color: #469191;">
+		<div id="game">
+		
+		<p id="pra">Russia</p>
+		<div id="baby">
+		<img  src="1x/ry3.png"/>
+		</div>
+		<div id="creatures">
+		<img style="display: none;" id="yay" src="1x/mons5.png"/>
+		<div id="babies22">
+		<img id="still" src="1x/babes4.png"/>
+		</div>
+		</div>
+		</div>
+		<div id="char">
+		<div id="instr">
+			<p>Choose the creature used in this country to scare children into behaving.</p>
+		</div></br>
+		<img class="block" id="1" src="Asset 10.png" onclick="incorrect(1)"/>
+		<img class="block" id="2" src="Asset 11.png" onclick="incorrect(2)"/>
+		<img class="block" id="3" src="Asset 38.png" onclick="correct()"/>
+		<img class="block" id="4" src="Asset 13.png" onclick="incorrect(4)"/>
+		<img class="block" id="5" src="Asset 14.png" onclick="incorrect(5)"/>
+		<img class="block" id="6" src="Asset 15.png" onclick="incorrect(6)"/>
+		</div>
+		<div id="cor">
+			<div id="imggg">
+			<img class="co" src="Asset 38.png"/></br>
+			</div>
+			<p>You have succesfully defeated the creature by correctly identifying the creature.</p></br></br></br></br>
+			<a class="intr" href="../Theme2.html">Home</a>
+			<p class="intr" id="cr">Next</p>
+		</div>
+		<div id="incor">
+			<div id="imgg">
+				<img class="co" src="Asset 38.png"/></br>
+			</div>
+			<p>You have incorrectly identified the creature and therefore it stole one of your children,
+			if you lose 3 children, you lose the game.</p></br></br></br></br>
+			<a class="intr" href="../Theme2.html">Home</a>
+			<p class="intr" id="incr">Next</p>
+		</div>
+		<!--audio id="myAudio1">
+  			<source src="1x/witches_house.mp3" type="audio/mpeg">
+  			Your browser does not support the audio element.
+		</audio>
+		<audio id="myAudio2">
+  			<source src="horse.mp3" type="audio/mpeg">
+  			Your browser does not support the audio element.
+		</audio-->
+	</body>
+</html>
+
+<!--style="display: none;"-->
