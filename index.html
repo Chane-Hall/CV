@@ -1,0 +1,565 @@
+<!DOCTYPE html >
+<html>
+<head>
+<title>Projects</title>
+<style>
+@font-face {
+  font-family: giveny;
+  src: url(Fonts/Giveny.otf);
+}
+@font-face {
+  font-family: ele;
+  src: url(Fonts/ele.ttf);
+}
+body{
+font-family: ele;
+background-color: #000000;
+color: white;
+font-size: 20px;
+height: 100%;
+width: 100%;
+cursor: url('path-to-image.png'), auto;
+}
+p{
+margin:auto;
+}
+#bg{
+height:100%;
+z-index: -10;
+position: absolute;
+left:0px;
+top:0px;
+}
+#logo{
+height:8%;
+z-index: 100000000;
+position: absolute;
+left:5%;
+top: 5%;
+}
+
+button{
+font-size: 20px;
+color: white;
+background-color: rgba(0,0,0,0);
+text-decoration: none;
+padding: 10px;
+margin:0px;
+}
+a:hover{
+background-color: green;
+}
+nav {
+	width: 90%;
+	height: 10%;
+	margin: 3% auto 2% 20%;
+	z-index: 100000;
+}
+.bg{
+height: 100px;
+}
+@keyframes movD {
+	0% {top: -3000px;}
+	100% {top: 0px;}
+}
+@keyframes movU {
+	0% {top: 0px;}
+	100% {top: -3000px;}
+}
+#bod{
+height:100%;
+z-index: -1000;
+position: absolute;
+left:0px;
+top:0px;
+}
+#homepar{
+	width: 50%;
+	position: absolute;
+left:80%;
+top:20%;
+}
+#nav{
+margin-left: 300px;
+}
+@keyframes projectsIn{
+	0% {width: 0%;}
+	100% {width: 100%;}
+}
+@keyframes projectsOut{
+	0% {width: 100%;}
+	100% {width: 0%;}
+}
+</style>
+<script>
+setTimeout(function(){
+    console.log("THIS IS");
+}, 2000);
+function BackG(repl){
+	document.getElementById("bgi").innerHTML = "<img id='bg' src=" +repl +">";
+}
+function btnormal(){
+	document.getElementById("bgi").innerHTML = '<img id="bg" src="homeee.gif" alt="Me">';
+}
+function creat(help, help2,help3,help4,help5, songID){
+document.getElementById('rise').pause();
+document.getElementById('felineS').pause();
+document.getElementById('creatS').pause();
+document.getElementById('mot').pause();
+var xx = document.getElementById(songID);
+  xx.play();
+
+  document.getElementById(help).style.animation= "movD 2s 1 forwards";
+  document.getElementById(help2).style.animation= "movU 2s 1 forwards";
+  document.getElementById(help3).style.animation= "movU 2s 1 forwards";
+  document.getElementById(help4).style.animation= "movU 2s 1 forwards";
+  document.getElementById(help5).style.animation= "movU 2s 1 forwards";
+ document.getElementById(help).style.zIndex= "10000";
+ document.getElementById(help5).style.zIndex= "-10000";
+ document.getElementById(help3).style.zIndex= "-10000";
+ document.getElementById(help4).style.zIndex= "-10000";
+ document.getElementById(help2).style.zIndex= "-10000";
+}
+function goBack(scr,bb){
+document.getElementById(scr).style.animation ="projectsOut 2s 1 forwards";
+document.getElementById(bb).style.opacity ="0";
+}
+function goToPro(dfxgs, bb){
+document.getElementById(dfxgs).style.animation ="projectsIn 2s 1 forwards";
+document.getElementById(bb).style.opacity ="1";
+switch(dfxgs){
+	case "scr1" :
+	setTimeout(function(){ 
+	window.location.href = "p1/theme1.html";
+	}, 2000);
+	break;
+	case "scr2" :
+	setTimeout(function(){ 
+	window.location.href = "p2/Theme2.html";
+	}, 2000);
+	break;
+	case "scr3" :
+	setTimeout(function(){ 
+	window.location.href = "p3/Theme3.html";
+	}, 2000);
+	break;
+	}
+
+
+}
+</script>
+</head>
+<body id="body_bg">
+<img id="logo" src="1x/logo2.png" alt="LOGO">
+<div id="bod">
+<nav id="nav">
+	<button onclick="creat('bod','pro1','bod2','pro3','about','mot')">Home</button>
+	<button onclick="creat('pro1','bod','bod2','pro3','about','felineS')">Feline sounds</button>
+	<button onclick="creat('bod2','bod','pro1','pro3','about','creatS')">Creatures around the world</button>
+	<button onclick="creat('pro3','bod','pro1','bod2','about','rise')">Rise up</button>
+	<button onclick="creat('about','bod','pro1','bod2','pro3','mot')">About Me</button>
+</nav>
+	<div id="bgi">
+		<img id="bg" src="homeee.gif" alt="Me"/>
+	</div>
+	<div id='homepar'>
+	<p><h2>See your surrounding beauty through my lenses.</h2> 
+	These are my second year projects, showcasing everything we've learnt along with some of my own skills.</p>
+	<h2>Projects</h2><br />
+	<img class="bg" src="p1.png" alt="Me" onmouseover="BackG('p1.png')" onmouseleave="btnormal()">
+	<img class="bg" src="do.jpg" alt="Me" onmouseover="BackG('do.jpg')" onmouseleave="btnormal()">
+	<img class="bg" src="prj.jpg" alt="Me" onmouseover="BackG('prj.jpg')" onmouseleave="btnormal()">
+	</div>
+<!--h2>Websites</h2><br />
+<img class="bg" src="cap3.png" alt="Me" onmouseover="BackG('cap3.png')" onmouseleave="btnormal()">
+<img class="bg" src="cap2.png" alt="Me" onmouseover="BackG('cap2.png')" onmouseleave="btnormal()">
+<img class="bg" src="cap1.png" alt="Me" onmouseover="BackG('cap1.png')" onmouseleave="btnormal()">
+<h2>Photography</h2><br />
+<img class="bg" src="egif.gif" alt="Me" onmouseover="BackG('egif.gif')" onmouseleave="btnormal()">
+<img class="bg" src="pho1.jpg" alt="Me" onmouseover="BackG('pho1.jpg')" onmouseleave="btnormal()">
+<img class="bg" src="pho.jpg" alt="Me" onmouseover="BackG('pho.jpg')" onmouseleave="btnormal()">
+<img class="bg" src="pho3.jpg" alt="Me" onmouseover="BackG('pho3.jpg')" onmouseleave="btnormal()">
+<img class="bg" src="pho4.jpg" alt="Me" onmouseover="BackG('pho4.jpg')" onmouseleave="btnormal()"-->
+</div>
+
+
+
+
+<style>
+#bg55{
+height:100%;
+z-index: -10;
+position: absolute;
+right:0px;
+top: 0px;
+}
+
+#i1{
+width:30%;
+z-index: 1;
+position: absolute;
+left:5%;
+top: 20%;
+color: white;
+}
+
+.ster{
+height:7%;
+z-index: 10;
+position: absolute;
+
+transform: rotate(45deg);
+ transform-origin: 50% 40%;
+animation: sizestr 2s 50000;
+}
+
+@keyframes sizestr {
+	0% {transform: scale(1, 1);}
+	50% {transform: scale(0.5,0.5);}
+	100% {transform: scale(1, 1);}
+}
+#pro1{
+background-color: #000000;
+height:100%;
+width:100%;
+z-index: -110000;
+position: absolute;
+left:0px;
+top: -3000px;
+}
+#scr1{
+width:0%;
+z-index: 100000;
+position: absolute;
+left:0px;
+top: 0px;
+}
+#backButt1{
+opacity : 0;
+z-index: 100001;
+position: absolute;
+left:20px;
+top: 90%;
+}
+</style>	
+<div id="pro1">
+<nav>
+	<button onclick="creat('bod','pro1','bod2','pro3','about','mot')">Home</button>
+	<button onclick="creat('pro1','bod','bod2','pro3','about','felineS')">Feline sounds</button>
+	<button onclick="creat('bod2','bod','pro1','pro3','about','creatS')">Creatures around the world</button>
+	<button onclick="creat('pro3','bod','pro1','bod2','about','rise')">Rise up</button>
+	<button onclick="creat('about','bod','pro1','bod2','pro3','mot')">About Me</button>
+</nav>
+	<div id="i1"><h2>Feline sounds</h2>
+	<p>That sounds purrrrfect.<br />
+	At feline sounds, our highly intuitive cats judge your music and predicts its future success. 
+	Come with us on this musical journey where the cat judges two songs to demonstrate which song would be successful. 
+	Then they listen to different instruments and the accepted instruments is combined to make a song.</p><br /><br />
+	<button onclick="goToPro('scr1','backButt1')">View Project</button>
+	</div>
+	<img class="img" id="bg55" src="cat2.gif" alt="project1">
+	<img class="img" id="scr1" src="Capturep1.png" alt="project3">
+	<audio id="felineS" preload>
+		<source src="Fonts/cat.mp3" type="audio/mp3">
+	</audio>
+	
+	<button id="backButt1" onclick="goBack('scr1','backButt1')">Back</button>
+</div>
+
+
+
+
+
+<style>
+#p2r{
+height:100%;
+z-index: -1;
+position: absolute;
+right:0px;
+top: 0px;
+animation: flash 2s 300;
+}
+#p2l{
+height:100%;
+z-index: -1;
+position: absolute;
+left:0px;
+top: 0px;
+animation: flash 2s 300;
+}
+
+
+#i44{
+position: absolute;
+left: 30%;
+width: 40%;
+top: 15%;
+z-index: 10;}
+
+#blan{
+height:100%;
+width:100%;
+z-index: -100;
+position: absolute;
+left:0px;
+top: 0px;
+}
+@keyframes flash {
+	0% {opacity: 0;}
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+#bod2{
+height:100%;
+width:100%;
+z-index: -110000;
+position: absolute;
+left:0px;
+top: -3000px;
+}
+#scr2{
+width:0%;
+z-index: 100000;
+position: absolute;
+left:0px;
+top: 0px;
+}
+#backButt2{
+opacity : 0;
+z-index: 100001;
+position: absolute;
+left:20px;
+top: 90%;
+}
+</style>
+
+<div id="bod2">
+<nav>
+	<button onclick="creat('bod','pro1','bod2','pro3','about','mot')">Home</button>
+	<button onclick="creat('pro1','bod','bod2','pro3','about','felineS')">Feline sounds</button>
+	<button onclick="creat('bod2','bod','pro1','pro3','about','creatS')">Creatures around the world</button>
+	<button onclick="creat('pro3','bod','pro1','bod2','about','rise')">Rise up</button>
+	<button onclick="creat('about','bod','pro1','bod2','pro3','mot')">About Me</button>
+</nav>
+<div class="pro">
+		<div id="i44"><h2>Creatures around the world</h2>
+		<p>Bring on the fear, the boogie man is near.<br/>
+The right choices can bring you happiness but the wrong choices are going to cost you. 
+So choose wisely. This journey takes you all around the world to teach you about the creatures used in different countries to scare children into behaving. 
+In order to save your 3 children, you must choose the correct creature when visiting each country.</p><br /><br />
+<button onclick="goToPro('scr2','backButt2')">View Project</button>
+</div>
+		<img class="img" id="p2r" src="1x/p22.png" alt="project2">
+		<img class="img" id="p2l" src="1x/p21.png" alt="project2">
+		<img class="img" id="scr2" src="Capturep2.png" alt="project3">
+	</div>
+	<img class="img" id="blan" src="black.png" alt="project3">
+	
+	<audio id="creatS">
+		<source src="Fonts/hh.mp3" type="audio/mp3">
+	</audio>
+	<button id="backButt2" onclick="goBack('scr2','backButt2')">Back</button>
+</div>
+
+
+
+<style>
+#p3{
+height:100%;
+z-index: -1;
+position: absolute;
+right:0%;
+top: 0%;
+}
+#p32{
+height:100%;
+z-index: -1;
+position: absolute;
+right:0%;
+top: 0%;
+animation: flash 2s 300;
+}
+#i5{
+width: 35%;
+z-index: 1;
+position: absolute;
+left:5%;
+top: 20%;
+color: white;
+}
+#dn{
+	height:30%;
+z-index: 10;
+position: absolute;
+left:-10%;
+top: 60%;
+animation: purple 20s 10;
+}
+@keyframes purple {
+	5% {left:0%;}
+	10% {left:0%;}
+	15% {left:10%;}
+	20% {left:10%;}
+	25% {left:20%;}
+	30% {left:20%;}
+	35% {left:30%;}
+	40% {left:30%;}
+	45% {left:40%;}
+	50% {left:40%;}
+	55% {left:50%;}
+	60% {left:50%;}
+	65% {left:60%;}
+	70% {left:60%;}
+	75% {left:70%;}
+	80% {left:70%;}
+	85% {left:80%;}
+	90% {left:80%;}
+	95% {left:90%;}
+  	100% {left:100%;}
+}
+#pro3{
+background-color: #000000;
+height:100%;
+width:100%;
+z-index: -110000;
+position: absolute;
+left:0px;
+top: -3000px;
+}
+#scr3{
+width:0%;
+z-index: 100000;
+position: absolute;
+left:0px;
+top: 0px;
+}
+#backButt3{
+opacity : 0;
+z-index: 100001;
+position: absolute;
+left:20px;
+top: 90%;
+}
+</style>
+<div id="pro3">
+<nav>
+	<button onclick="creat('bod','pro1','bod2','pro3','about','mot')">Home</button>
+	<button onclick="creat('pro1','bod','bod2','pro3','about','felineS')">Feline sounds</button>
+	<button onclick="creat('bod2','bod','pro1','pro3','about','creatS')">Creatures around the world</button>
+	<button onclick="creat('pro3','bod','pro1','bod2','about','rise')">Rise up</button>
+	<button onclick="creat('about','bod','pro1','bod2','pro3','mot')">About Me</button>
+</nav>
+		<div id="i5"><h2>Imagine dragons - Rise Up</h2>
+		<p>Look up, that's the only way to rise.<br/>
+		Through kinetic typography, we convey the emotion that is meant in the song Rise Up by Imagine dragons.</p><br /><br />
+		<button onclick="goToPro('scr3','backButt3')">View Project</button>
+		</div>
+		<img class="img" id="p3" src="1x/p3.png" alt="project3">
+		<img class="img" id="p32" src="prj3s.jpg" alt="project3">
+		<img class="img" id="scr3" src="Capturep3.png" alt="project3">
+		<!--img class="img" id="dn" src="bal.gif" alt="project3"-->
+		<audio id="rise">
+		<source src="Fonts/ball.mp3" type="audio/mp3">
+		</audio>
+		<button id="backButt3" onclick="goBack('scr3','backButt3')">Back</button>
+</div>
+	
+	
+	
+	
+	
+	
+
+
+
+
+<style>
+
+#bgsdf{
+height:100%;
+z-index: -10;
+position: absolute;
+right:0px;
+top: 0px;
+}
+
+#about{
+background-color: #000000;
+height:100%;
+width:100%;
+z-index: -110000;
+position: absolute;
+left:0px;
+top: -3000px;
+}
+#aboutpar{
+width:30%;
+z-index: 1;
+position: absolute;
+left:5%;
+top: 20%;
+}
+#scr4{
+width:0%;
+z-index: 100000;
+position: absolute;
+left:0px;
+top: 0px;
+}
+#backButt4{
+background-color:black;
+opacity : 0;
+z-index: 100001;
+position: absolute;
+right:20px;
+top: 90%;
+}
+</style>
+<div id="about">
+<nav>
+	<button onclick="creat('bod','pro1','bod2','pro3','about','mot')">Home</button>
+	<button onclick="creat('pro1','bod','bod2','pro3','about','felineS')">Feline sounds</button>
+	<button onclick="creat('bod2','bod','pro1','pro3','about','creatS')">Creatures around the world</button>
+	<button onclick="creat('pro3','bod','pro1','bod2','about','rise')">Rise up</button>
+	<button onclick="creat('about','bod','pro1','bod2','pro3','mot')">About Me</button>
+</nav>
+<div id='aboutpar'><h2>About </h2><p>
+I am a Multi Media student who has developed many graphic design skills. 
+I can create websites from scratch with all functionality and visual elements. 
+I can create 2D grames, interactive infographics and interactive logo presentations. 
+This is my digital portfolio and I have included some of the projects that I have done. 
+For any further information, please contact me at u17061238@tuks.co.za or at 0728696820</p><br /><br />
+<button onclick="goToPro('scr4','backButt4')">View Plagirism Form</button>
+</div>
+<img id="bgsdf" src="1x/me1.png" alt="Me">
+<img class="img" id="scr4" src="plgR2.jpg" alt="project3">
+<button id="backButt4" onclick="goBack('scr4','backButt4')">Back</button>
+<audio id="mot">
+	<source src="Fonts/mot.mp3" type="audio/mp3">
+</audio>
+</div>
+
+</body>
+</html>
+
+
+
+
+
+<!--
+
+https://www.creativebloq.com/portfolios/examples-712368
+https://www.wix.com/blog/2016/09/12-stunning-photography-websites/
+
+scrollbar
+https://scotch.io/tutorials/customize-the-browsers-scrollbar-with-css
+
+https://za.pinterest.com/tubxulartozier_/dancing-drawings/
+
+split gifs
+https://ezgif.com/split
+https://ezgif.com/help/gif-transparency
+https://www.online-image-editor.com/help/transparency
+https://www194.lunapic.com/editor/
+
+-->
