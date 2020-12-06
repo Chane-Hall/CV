@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Project 1</title>
+<style>
+body{
+background-color: pink;
+}
+#kla {
+height: 350px;
+position: absolute;
+top: 40%;
+left: 10%;
+}
+#cat {
+height: 100px;
+position: absolute;
+top: 70%;
+left: 80%;
+}
+#loop {
+height: 100px;
+position: absolute;
+top: 70%;
+left: 80%;
+animation: sizestr 7s 1 forwards;
+}
+#loop2 {
+height: 100px;
+position: absolute;
+top: 70%;
+left: 75%;
+animation: sizestr2 4s 1 forwards;
+}
+@keyframes sizestr {
+	10% {left: 80%;}
+	70% {left: 30%;}
+	100% {left: 30%;}
+}
+@keyframes sizestr2 {
+	10% {left: 75%;}
+	70% {left: 100%;}
+	100% {left: 110%;}
+}
+@keyframes paw {
+	10% {top: 100%;}
+	70% {top: 40%;}
+	100% {top: 100%;}
+}
+@keyframes next {
+	100% {top: -100%;}
+}
+@keyframes kant {
+	100% {left: 30%;}
+}
+#s1 {
+height: 160px;
+position: absolute;
+top: 7%;
+left: 50%;}
+#s2 {
+height: 160px;
+position: absolute;
+top: 7%;
+left: 65%;}
+#s3 {
+height: 160px;
+position: absolute;
+top: 7%;
+left: 80%;}
+.bo {
+animation: next 2s 1 forwards;
+}
+.kant {
+animation: kant 2s 1 forwards;
+}
+.paw {
+animation: paw 2s 1;
+}
+#catkies{
+height: 100%;
+width: 100%;
+position: absolute;
+top: 0%;
+left: 0%;}
+}
+</style>
+<script>
+
+var count = 1;
+var count2 = 2;
+function homeP(butt){
+   var good = document.getElementById('good');
+   var bad = document.getElementById('bad');
+var x = document.getElementById('catkies');
+var xy = document.getElementById('kla');
+var xyy = document.getElementById('s1');
+var xyyy = document.getElementById('s2');
+var xyyyy = document.getElementById('s3');
+var xxyyy = document.getElementById('cat');
+var arro = document.getElementById('arro');
+var i1 = document.getElementById('i1');
+switch(butt) {
+  case 1:
+    x.innerHTML  = '<img id="loop" src="1x/gif.gif"/>';
+    good.play();
+ bad.pause();
+//~     guitar.play();
+//~     drum.play();
+//~     violin.play();
+//~     saam.play();
+    break;
+  case 2:
+      bad.play();
+ good.pause();
+	x.innerHTML  = '<img id="loop2" src="1x/gif2.gif"/>';
+    break;
+  case 3:
+      good.pause();
+ bad.pause();
+  //var i1 = document.getElementById('i1');
+ // i1.classList.add("kant");
+	console.log('dzfxndggnnxg');
+	xy.classList.add("bo");
+	xyy.classList.add("bo");
+	xyyy.classList.add("bo");
+	xyyyy.classList.add("bo");
+	x.classList.add("bo");
+	//i1.classList.add("kant");
+	arro.style.animation = "flicker 2s 1000 forwards";
+	//setInterval(myTimer, 4000);
+	i1.style.animation = "appr 2s 1 forwards";
+	var sinne = document.getElementById('sinne');
+sinne.innerHTML = "Click on the instrument to see if it is approved by the cat and then on the arrow to go to the next instrument.";
+    break;
+}
+}
+
+function instr(ins){
+var drum = document.getElementById('drum');
+drum.play();
+console.log("help" + ins);
+var p = document.getElementById('paw2');
+var pa = document.getElementById('disa');
+var i1 = document.getElementById('i1');
+i1.style.animation = " appr 1s 1 forwards";
+p.classList.add("paw");
+pa.style.animation = "appr 1s 1s 1 forwards";
+}
+
+function instr2(ins){
+var drum = document.getElementById('drum');
+var guitar = document.getElementById('guitar');
+var piano = document.getElementById('piano');
+var violin = document.getElementById('violin');
+var saam = document.getElementById('saam');
+console.log(ins);
+if (ins == "i2" || ins == "i4"){
+if(ins == "i2"){piano.play()}
+if(ins == "i4"){violin.play()}
+var p = document.getElementById('paw2');
+var pa = document.getElementById('app');
+p.style.animation = "none";
+ p.offsetHeight; /* trigger reflow */
+  p.style.animation = null;
+p.style.animation = "paw 1s 1";
+pa.style.animation = "appr 1s 1s 1 forwards";
+}
+else{
+if(ins == "i3"){guitar.play()}
+var p = document.getElementById('paw2');
+var pa = document.getElementById('disa');
+p.style.animation = "none";
+ p.offsetHeight; /* trigger reflow */
+  p.style.animation = null;
+  p.style.animation = "paw 1s 1";
+pa.style.animation = "appr 1s 1s 1 forwards";
+}
+}
+
+function NewInstr(){
+var drum = document.getElementById('drum');
+var guitar = document.getElementById('guitar');
+var piano = document.getElementById('piano');
+var violin = document.getElementById('violin');
+var saam = document.getElementById('saam');
+drum.pause();
+guitar.pause();
+violin.pause();
+piano.pause();
+saam.pause();
+
+var p = document.getElementById('app');
+var pa = document.getElementById('disa');
+p.style.animation = "apprG 1s 2s 1 forwards";
+pa.style.animation = "apprG 1s 2s 1 forwards";
+
+var str = "i" + count;
+var str2 = "i" + count2;
+
+var xyu = document.getElementById(str);
+xyu.style.animation = "apprG 1s 1 forwards";
+xyu.style.zIndex  = "1";
+if (count == 4){
+saam.play();
+	var arro = document.getElementById('arro');
+	arro.style.visibility = "hidden";
+	var sinne = document.getElementById('sinne');
+	sinne.style.visibility = "hidden";
+	var p = document.getElementById('paw2');
+	p.style.animation = "none";
+ p.offsetHeight; /* trigger reflow */
+  p.style.animation = null;
+  p.style.animation = "paw 1s 1";
+var micc = document.getElementById('mic');
+micc.innerHTML = '<img id="mic2" src="1x/mic.gif"/><p id="mic3">Feline Sounds<br/>That sounds purrrfect</p>';
+
+}else{
+var xy2 = document.getElementById(str2);
+xy2.classList.add("kant");
+++count;
+++count2;
+var el = document.getElementById('paw2');
+}
+}
+</script>
+</head>
+<body>
+	<img id="kla" src="1x/Asset 9.png"/>
+	<div id="catkies" >
+	<img id="cat" src="1x/c1.png"/>
+	</div>
+	<img id="s1" src="1x/s1.png" onclick="homeP(1)"/>
+	<img id="s2" src="1x/s2.png" onclick="homeP(2)"/>
+	<img id="s3" src="1x/s3.png" onclick="homeP(3)"/>
+
+<!--gtdgfgfjfggghdhdgghghghdfdhhfhddhdfhdfhdhdfhfdhhdfhddfhhddghgdhgdhgdhhghghghgfgfdhdfh-->
+
+<style>
+#i1{
+height: 400px;
+position: absolute;
+top: 25%;
+left: 25%;
+z-index: 10000;
+opacity:0;
+}
+#i2{
+height: 400px;
+position: absolute;
+top: 25%;
+left: -40%;
+z-index: 10000;
+}
+#i3{
+height: 500px;
+position: absolute;
+top: 25%;
+left: -40%;
+z-index: 10000;
+}
+#i4{
+height: 400px;
+position: absolute;
+top: 25%;
+left: -40%;
+z-index: 10000;
+}
+
+#paw2{
+height: 700px;
+position: absolute;
+top: 100%;
+left: 43%;
+z-index: 10000;
+}
+#app{
+height: 120px;
+position: absolute;
+top: 45%;
+left: 43%;
+opacity:0;
+z-index: 10000;
+}
+#disa{
+height: 120px;
+position: absolute;
+top: 45%;
+left: 45%;
+opacity:0;
+z-index: 10000;
+}
+@keyframes appr {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+@keyframes apprG {
+	
+	100% {opacity: 0;}
+	
+}
+@keyframes flicker {
+	
+	50% {opacity: 1;}
+	100% {opacity: 0;}
+}
+@keyframes size {
+	
+	50% { transform: scale(0.7);}
+	100% { transform: scale(1);}
+}
+.flicker{
+animation: flicker 2s 1000;
+}
+#arro{
+height: 70px;
+position: absolute;
+top: 45%;
+left: 90%;
+opacity:0;
+z-index: 10000;
+}
+#sinne{
+padding: 20px;
+height: 70px;
+width: 450px;
+position: absolute;
+top: 7%;
+left: 50px;
+background-color: white;
+border: 2px dotted black;
+}
+#mic2{
+height: 70%;
+position: absolute;
+top: 10%;
+left: 40%;}
+#mic3{
+font-size: 30px;
+text-align: center;
+height: 100%;
+position: absolute;
+top: 80%;
+left: 40%;}
+</style>
+<div id="instrP">
+	<img id="i1" src="1x/i1.png" onclick="instr('i1')"/>
+	<img id="i2" src="1x/i2.png" onclick="instr2('i2')"/>
+	<img id="i3" src="1x/i3.png" onclick="instr2('i3')"/>
+	<img id="i4" src="1x/i4.png" onclick="instr2('i4')"/>
+	
+	<img id="app" src="1x/paw.png"/>
+	<img id="disa" src="1x/scr.png"/>	
+	<img id="paw2" src="1x/scrp.png"/>
+	
+	<img id="arro" src="1x/Asset 8.png" onclick="NewInstr()"/>
+	<div id='mic'>
+	
+	</div>
+
+</div>
+
+<div id="sinne">
+Play one of the songs to see if the cat likes it, OR click on the guitar to go to the instrument section and make a song.
+</div>
+
+
+
+
+<audio id="good">
+  <source src="1x/good.mp3" type="audio/mpeg">
+</audio>
+<audio id="bad">
+  <source src="1x/bad.mp3" type="audio/mpeg">
+</audio>
+<audio id="piano">
+  <source src="1x/piano.mp3" type="audio/mpeg">
+</audio>
+<audio id="violin">
+  <source src="1x/violin2.mp3" type="audio/mpeg">
+</audio>
+<audio id="guitar">
+  <source src="1x/guitar.mp3" type="audio/mpeg">
+</audio>
+<audio id="drum">
+  <source src="1x/drum.mp3" type="audio/mpeg">
+</audio>
+<audio id="saam">
+  <source src="1x/saam.mp3" type="audio/mpeg">
+</audio>
+</body>
+</html>
